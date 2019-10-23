@@ -1,34 +1,77 @@
-.footer {
-    margin: 0% 25%;
-    background: lightgrey;
-    
-    p {
-      text-align: center;
-      color: black;
-      font-size: 1.6rem;
-      padding: 20px;
-    }
-  
-    @media @tablet  {
-      display: flex;
-      flex-direction: row;
-  }
+// <footer class="footer">
+// <div class='footerLinks'>
+//         <a class="links" href="">About</a>
 
-    @media @desktop  {
-        display: flex;
-        flex-direction: row;
-    }
-}
 
-.footer-links {
-    margin: 0 10rem 0 0;
-    a {
-        font-size: 1.6rem;
-        color: black;
-        padding: 20px;
-        text-decoration: none;
-        //border: 1px solid red;
-            
-    }
+.footer{
+	text-align: center;
+	background-color:skyblue;
+    border: 1px solid black;
+    border: 1px solid purple;
+	@media @aboutDesktop{
+		display:flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.footerLinks{
+		margin: 0 auto;
+        border: 1px solid green;
+		@media @aboutDesktop{
+			display:inline-block;
+            width:70%;
+        }
+        
+        .links{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            border: 1px solid green;
+            @media @aboutDesktop{
+                display:inline-block;
+                width:70%;
+            }
 
+		a {
+			font-size:2rem;
+            margin: 2rem 5rem;
+            text-decoration: none;
+            border: 1px solid red;
+		}
+		.tooltip{
+			position:relative;
+			.tooltiptext{
+				display:none;
+				width:500%;
+				color:red;
+				background-color: snow;
+				border:1px solid grey;
+				font-size:2rem;
+				font-weight: bold;
+				position:absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -394px;
+				@media @aboutMobile{
+					margin-left: -370px;
+				}
+				@media @aboutDesktop{
+					margin-left: -240px;
+				}
+			
+			}
+			&:hover .tooltiptext {
+				display:block;
+		  }
+		}
+
+	}
+	.copyRight{
+		font-size:2rem;
+		text-align: center;
+		padding:2rem;
+		@media @aboutDesktop{
+			width:15%;
+		}
+	}
 }
