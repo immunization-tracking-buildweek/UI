@@ -416,19 +416,18 @@ section {
 .about-page-header {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   text-align: center;
   border: 1px solid black;
-  width: 100%;
-  margin: auto;
-  padding: 2rem;
 }
 @media (min-width: 800px) {
   .about-page-header {
     flex-direction: row;
   }
 }
-.about-page-header .logo {
+.about-page-header .aboutLogo {
   font-size: 3rem;
   text-align: center;
   background-color: skyblue;
@@ -436,19 +435,19 @@ section {
   margin: auto;
 }
 @media (min-width: 800px) {
-  .about-page-header .logo {
+  .about-page-header .aboutLogo {
     width: 25%;
   }
 }
-.about-page-header .cardeaNote {
+.about-page-header p {
   font-size: 1.6rem;
 }
 @media (min-width: 800px) {
-  .about-page-header .cardeaNote {
+  .about-page-header p {
     font-size: 2rem;
   }
 }
-.about-page-header .signin {
+.about-page-header .aboutSignin {
   font-size: 1.6rem;
   padding: 1rem;
   background-color: skyblue;
@@ -457,43 +456,67 @@ section {
 }
 .aboutContainer {
   width: 100%;
+}
+.aboutContainer section {
   margin: auto;
 }
-.aboutContainer .aboutImg {
+.aboutContainer section .aboutImg {
   width: 100%;
   max-height: 40vh;
   margin: auto;
 }
 @media (min-width: 1000px) {
-  .aboutContainer .aboutImg {
+  .aboutContainer section .aboutImg {
     max-height: 60vh;
   }
 }
-.quote {
+.aboutContainer section .aboutQuote {
   font-size: 2rem;
   text-align: center;
   font-weight: bold;
+  margin: 1rem 0 auto;
 }
-.meet {
+@media (min-width: 1000px) {
+  .aboutContainer section .aboutQuote {
+    font-size: 3rem;
+  }
+}
+.aboutContainer section .topNote {
+  font-size: 1.6rem;
+}
+@media (min-width: 1000px) {
+  .aboutContainer section .topNote {
+    font-size: 2rem;
+  }
+}
+.aboutContainer section .aboutMeet {
   text-align: center;
+}
+@media (min-width: 1000px) {
+  .aboutContainer section .aboutMeet {
+    font-size: 3rem;
+  }
 }
 a {
   text-decoration: none;
 }
-#team {
+a:hover {
+  background-color: slateblue;
+}
+#aboutTeam {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 800px) {
-  #team {
+  #aboutTeam {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
-.person {
+.aboutPerson {
   text-align: center;
   width: 60%;
   height: 25rem;
@@ -503,25 +526,25 @@ a {
   margin: 2rem 0;
 }
 @media (min-width: 800px) {
-  .person {
+  .aboutPerson {
     width: 40%;
   }
 }
 @media (min-width: 1000px) {
-  .person {
+  .aboutPerson {
     width: 27%;
   }
 }
-.pic {
+.aboutPic {
   margin: 1rem 0 auto;
   border-radius: 10px;
   width: auto;
   height: 100px;
 }
-.name {
+.aboutName {
   margin: 1rem 0 auto;
 }
-.role {
+.aboutRole {
   margin: 0.5rem 0 auto;
 }
 i {
@@ -548,12 +571,42 @@ i {
 @media (min-width: 1000px) {
   .aboutFooter .footerLinks {
     display: inline-block;
-    width: 50%;
+    width: 70%;
   }
 }
 .aboutFooter .footerLinks a {
   font-size: 2rem;
   margin: 2rem 5rem;
+}
+.aboutFooter .footerLinks .tooltip {
+  position: relative;
+}
+.aboutFooter .footerLinks .tooltip .tooltiptext {
+  display: none;
+  width: 500%;
+  color: red;
+  background-color: snow;
+  border: 1px solid grey;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -394px;
+}
+@media (min-width: 500px) {
+  .aboutFooter .footerLinks .tooltip .tooltiptext {
+    margin-left: -370px;
+  }
+}
+@media (min-width: 1000px) {
+  .aboutFooter .footerLinks .tooltip .tooltiptext {
+    margin-left: -240px;
+  }
+}
+.aboutFooter .footerLinks .tooltip:hover .tooltiptext {
+  display: block;
 }
 .aboutFooter .copyRight {
   font-size: 2rem;

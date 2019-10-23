@@ -1,37 +1,38 @@
 .about-page-header{
 	display:flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 	text-align: center;
 	border: 1px solid black;
-	@media @tablet{
+	
+	@media @aboutTablet{
 		flex-direction: row;
 	}
 	
-	width:100%;
-	margin:auto;
-	padding: 2rem;
-
-	.logo {
+	.aboutLogo {
 		font-size:3rem;
 		text-align: center;
 		background-color:skyblue;
 		width:40%;
 		margin:auto;
-		@media @tablet{
+		@media @aboutTablet{
 			width:25%;
 			@padding: 1rem;
 		}
-
-		
+	
 	}
-	.cardeaNote {
+	p{
 		font-size:1.6rem;
-		@media @tablet{
+		@media @aboutTablet{
 			font-size:2rem;
 		}
+		@media @aboutDesktop{
+
+		}
 	}
-	.signin{
+	.aboutSignin{
 		font-size:1.6rem;
 		padding: 1rem;
 		background-color:skyblue;
@@ -42,47 +43,70 @@
 
 .aboutContainer{
 	width:100%;
-	margin:auto;
+	
+	section{
+		margin:auto;
 
-	.aboutImg{
+		.aboutImg{
 		width: 100%;
 		max-height: 40vh;
 		margin:auto;
-		@media @desktop{
+		@media @aboutDesktop{
 			max-height: 60vh;
 		}
+		
 	}
+		.aboutQuote{
+			font-size:2rem;
+			text-align: center;
+			font-weight: bold;
+			margin: 1rem 0 auto;
+			@media @aboutDesktop{
+				font-size:3rem;
+			}
+		}
+		.topNote{
+			font-size:1.6rem;
+			@media @aboutDesktop{
+				font-size: 2rem;
+			}
+		}
+		.aboutMeet{
+			text-align: center;
+			@media @aboutDesktop{
+				font-size:3rem;
+			}
+		}	
+	}
+	
 }
 
-.quote{
-	font-size:2rem;
-	text-align: center;
-	font-weight: bold;
-}
 
-.meet{
-	text-align: center;
-}
+
+
 
 a{
 	text-decoration: none;
+	&:hover{
+		background-color:slateblue;
+	}
 }
 
 
-#team{
+#aboutTeam{
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	@media @tablet{
+	@media @aboutTablet{
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 	}
 	
 }
-.person{
+.aboutPerson{
 	text-align: center;
 	width: 60%;
 	height: 25rem;
@@ -91,26 +115,26 @@ a{
 	background-color:silver;
 	margin: 2rem 0;
 
-	@media @tablet{
+	@media @aboutTablet{
 		width:40%;
 
 	}
-	@media @desktop{
+	@media @aboutDesktop{
 		width:27%;
 	}
 }
-.pic  {
+.aboutPic  {
 	
 	margin: 1rem 0 auto;
 	border-radius:10px;
 	width: auto;
 	height: 100px;	
 }
-.name{
+.aboutName{
 	margin: 1rem 0 auto;
 
 }
-.role{
+.aboutRole{
 	margin: .5rem 0 auto;
 }
 i {
@@ -122,7 +146,7 @@ i {
 	text-align: center;
 	background-color:skyblue;
 	border: 1px solid black;
-	@media @desktop{
+	@media @aboutDesktop{
 		display:flex;
 		justify-content: space-evenly;
 		align-items: center;
@@ -132,25 +156,70 @@ i {
 		display:flex;
 		flex-direction:row;
 		justify-content: space-evenly;
-		@media @desktop{
+		@media @aboutDesktop{
 			display:inline-block;
-			width:50%;
+			width:70%;
 		}
 		a {
 			font-size:2rem;
 			margin: 2rem 5rem;
 		}
+		.tooltip{
+			position:relative;
+			.tooltiptext{
+				display:none;
+				width:500%;
+				color:red;
+				background-color: snow;
+				border:1px solid grey;
+				font-size:2rem;
+				font-weight: bold;
+				position:absolute;
+				z-index: 1;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -394px;
+				@media @aboutMobile{
+					margin-left: -370px;
+				}
+				@media @aboutDesktop{
+					margin-left: -240px;
+				}
+			
+			}
+			&:hover .tooltiptext {
+				display:block;
+		  }
+		}
+
 	}
 	.copyRight{
 		font-size:2rem;
 		text-align: center;
 		padding:2rem;
-		@media @desktop{
+		@media @aboutDesktop{
 			width:15%;
 		}
 	}
-	
+	// .toolTip{
+	// 	position:relative;
+	// 	z-index: 20;
+	// 	&:hover{
+	// 		z-index: 21;
+			
+	// 	}
+	// 	}
+	// #alertMsg {
+	// 	display:none;
+	// 	&:hover .alertMsg{
+	// 		display:block;
+	// 	}
+	// }
 }
+
+
+
+
 
 
 
