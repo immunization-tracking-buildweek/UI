@@ -421,6 +421,8 @@ section {
   align-items: center;
   text-align: center;
   border: 1px solid black;
+  background-color: skyblue;
+  height: 8rem;
 }
 @media (min-width: 800px) {
   .about-page-header {
@@ -430,9 +432,10 @@ section {
 .about-page-header .aboutLogo {
   font-size: 3rem;
   text-align: center;
-  background-color: skyblue;
+  background-color: snow;
   width: 40%;
-  margin: auto;
+  margin: 0 1.5rem;
+  padding: 0.75rem 0;
 }
 @media (min-width: 800px) {
   .about-page-header .aboutLogo {
@@ -450,7 +453,7 @@ section {
 .about-page-header .aboutSignin {
   font-size: 1.6rem;
   padding: 1rem;
-  background-color: skyblue;
+  background-color: snow;
   width: 15rem;
   margin: auto;
 }
