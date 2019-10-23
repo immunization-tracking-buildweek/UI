@@ -6,24 +6,41 @@
 	align-items: center;
     text-align: center;
     margin: 0 auto;
-    border: 1px solid black;
-	background-color:skyblue;
+	background-color:#99BFF2;
 	height:8rem;
 
-	@media @aboutTablet{
-		flex-direction: row;
+	.nav{
+
+		@media @mobile {
+			display:flex;
+			flex-direction: row;
+			justify-content: center;
+			width: 100%;
+		  }
+
+		@media @tablet {
+			display:flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+		  }
+
 	}
+
 	
-	.Logo {
+	.logo {
 		font-size:3rem;
 		text-align: center;
-		background-color:snow;
 		width:40%;
 		margin:0 1.5rem;
 		padding: .75rem 0;
 		@media @aboutTablet{
 			width:25%;
 			@padding: 1rem;
+		}
+
+		.nav-logo {
+			color: #242B40;
 		}
 	
 	}
