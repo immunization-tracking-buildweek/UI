@@ -1,42 +1,42 @@
-// <footer class="footer">
-// <div class='footerLinks'>
-//         <a class="links" href="">About</a>
-
-
-.footer{
+.footer {
 	text-align: center;
-	background-color:skyblue;
-    border: 1px solid black;
-    border: 1px solid purple;
-	@media @aboutDesktop{
+	width:100%;
+	margin:auto;
+	background-color:rgba(153, 191,242,.5);
+	
+		@media @aboutDesktop{
 		display:flex;
 		justify-content: space-evenly;
 		align-items: center;
 	}
 	.footerLinks{
 		margin: 0 auto;
-        border: 1px solid green;
+		
+		display:flex;
+		flex-direction: column;
+		flex-wrap: wrap;
 		@media @aboutDesktop{
 			display:inline-block;
-            width:70%;
-        }
-        
-        .links{
-            display:flex;
-            flex-direction:row;
-            justify-content: space-evenly;
-            border: 1px solid green;
-            @media @aboutDesktop{
-                display:inline-block;
-                width:70%;
-            }
-
+		    width:70%;
+		}
 		a {
 			font-size:2rem;
-            margin: 2rem 5rem;
-            text-decoration: none;
-            border: 1px solid red;
-		}
+			color:#242B40;
+			margin: .5rem 5rem;
+			text-decoration: none;
+		} /*this closes a */
+		.links{
+			display:flex;
+			flex-direction:row;
+			justify-content: space-evenly;
+			// border: 1px solid green;
+			font-size:2rem;
+			color:#242B40;
+			@media @aboutDesktop{
+			    display:inline-block;
+			    width:70%;
+			}
+		} /*this closes the links*/
 		.tooltip{
 			position:relative;
 			.tooltiptext{
@@ -45,7 +45,7 @@
 				color:red;
 				background-color: snow;
 				border:1px solid grey;
-				font-size:2rem;
+				font-size:2.5rem;
 				font-weight: bold;
 				position:absolute;
 				z-index: 1;
@@ -58,20 +58,36 @@
 				@media @aboutDesktop{
 					margin-left: -240px;
 				}
-			
-			}
+			} /*this closes the tooltiptext*/
 			&:hover .tooltiptext {
 				display:block;
-		  }
-		}
-
-	}
-	.copyRight{
+			} 	/*this closes the hover*/
+		} /*this closes the tooltip*/  	
+	} /*this closes the footerLinks*/
+	.copyright{
 		font-size:2rem;
+		font-weight: bold;
 		text-align: center;
 		padding:2rem;
+		color:#242B40;
+		border:1px solid red;
 		@media @aboutDesktop{
 			width:15%;
 		}
-	}
-}
+	} /*this closes the copyRight*/
+} /*this closes .footer*/
+
+
+
+
+
+
+	
+
+		
+	
+ 
+	
+
+  
+
