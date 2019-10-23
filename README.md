@@ -12,4 +12,8 @@ The use of this app other than the original stated purpose is not allowed withou
 
 
 Credits:
-Images used in this project were obtained free of charge from (LIST sources).
+
+Images
+
+Homepage
+sleepingGirl photo by Ivone De Melo from Pexels
