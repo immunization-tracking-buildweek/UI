@@ -423,6 +423,11 @@ section {
   margin: auto;
   padding: 2rem;
 }
+@media (min-width: 800px) {
+  .about-page-header {
+    flex-direction: row;
+  }
+}
 .about-page-header .logo {
   font-size: 3rem;
   text-align: center;
@@ -430,8 +435,18 @@ section {
   width: 40%;
   margin: auto;
 }
-.about-page-header p {
+@media (min-width: 800px) {
+  .about-page-header .logo {
+    width: 25%;
+  }
+}
+.about-page-header .cardeaNote {
   font-size: 1.6rem;
+}
+@media (min-width: 800px) {
+  .about-page-header .cardeaNote {
+    font-size: 2rem;
+  }
 }
 .about-page-header .signin {
   font-size: 1.6rem;
@@ -440,9 +455,24 @@ section {
   width: 15rem;
   margin: auto;
 }
+.aboutContainer {
+  width: 100%;
+  margin: auto;
+}
+.aboutContainer .aboutImg {
+  width: 100%;
+  max-height: 40vh;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  .aboutContainer .aboutImg {
+    max-height: 60vh;
+  }
+}
 .quote {
   font-size: 2rem;
   text-align: center;
+  font-weight: bold;
 }
 .meet {
   text-align: center;
@@ -450,15 +480,18 @@ section {
 a {
   text-decoration: none;
 }
-.aboutImg {
-  max-width: 100%;
-  max-height: 40vh;
-}
 #team {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 800px) {
+  #team {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .person {
   text-align: center;
@@ -468,6 +501,16 @@ a {
   border-radius: 15px;
   background-color: silver;
   margin: 2rem 0;
+}
+@media (min-width: 800px) {
+  .person {
+    width: 40%;
+  }
+}
+@media (min-width: 1000px) {
+  .person {
+    width: 27%;
+  }
 }
 .pic {
   margin: 1rem 0 auto;
@@ -490,17 +533,35 @@ i {
   background-color: skyblue;
   border: 1px solid black;
 }
-footerLinks {
+@media (min-width: 1000px) {
+  .aboutFooter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.aboutFooter .footerLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
-.bottomLink {
+@media (min-width: 1000px) {
+  .aboutFooter .footerLinks {
+    display: inline-block;
+    width: 50%;
+  }
+}
+.aboutFooter .footerLinks a {
   font-size: 2rem;
   margin: 2rem 5rem;
 }
-.copyRight {
+.aboutFooter .copyRight {
   font-size: 2rem;
   text-align: center;
   padding: 2rem;
+}
+@media (min-width: 1000px) {
+  .aboutFooter .copyRight {
+    width: 15%;
+  }
 }
