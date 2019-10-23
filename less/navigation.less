@@ -1,36 +1,45 @@
-.navigation {
+.about-page-header{
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border: 1px solid black;
+	background-color:skyblue;
+	height:8rem;
+	
+	@media @aboutTablet{
+		flex-direction: row;
+	}
+	
+	.aboutLogo {
+		font-size:3rem;
+		text-align: center;
+		background-color:snow;
+		width:40%;
+		margin:0 1.5rem;
+		padding: .75rem 0;
+		@media @aboutTablet{
+			width:25%;
+			@padding: 1rem;
+		}
+	
+	}
+	p{
+		font-size:1.6rem;
+		@media @aboutTablet{
+			font-size:2rem;
+		}
+		@media @aboutDesktop{
 
-    width: 100%;
-    height: 5%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px dashed silver;
-
-    @media @tablet {
-        display:flex;
-        justify-content: center;
-    }
-    
-    @media @desktop {
-        display:flex;
-        justify-content: center;
-    }
-   
-    .logo-large {
-       padding: .4rem;
-    }
-
-    .links {
-        margin: 0 auto;
-        a {
-            font-size: 1.8rem;
-            color: black;
-            padding: 20px;
-            text-decoration: none;
-            //border: 1px solid red;
-                
-        }
-
-    }
+		}
+	}
+	.aboutSignin{
+		font-size:1.6rem;
+		padding: 1rem;
+		background-color:snow;
+		width:15rem;
+		margin:auto;
+	}
 }
