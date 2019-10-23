@@ -1,23 +1,41 @@
-.Footer{
+// <footer class="footer">
+// <div class='footerLinks'>
+//         <a class="links" href="">About</a>
+
+
+.footer{
 	text-align: center;
 	background-color:skyblue;
-	border: 1px solid black;
+    border: 1px solid black;
+    border: 1px solid purple;
 	@media @aboutDesktop{
 		display:flex;
 		justify-content: space-evenly;
 		align-items: center;
 	}
 	.footerLinks{
-		display:flex;
-		flex-direction:row;
-		justify-content: space-evenly;
+		margin: 0 auto;
+        border: 1px solid green;
 		@media @aboutDesktop{
 			display:inline-block;
-			width:70%;
-		}
+            width:70%;
+        }
+        
+        .links{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+            border: 1px solid green;
+            @media @aboutDesktop{
+                display:inline-block;
+                width:70%;
+            }
+
 		a {
 			font-size:2rem;
-			margin: 2rem 5rem;
+            margin: 2rem 5rem;
+            text-decoration: none;
+            border: 1px solid red;
 		}
 		.tooltip{
 			position:relative;
