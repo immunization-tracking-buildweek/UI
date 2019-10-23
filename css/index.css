@@ -361,27 +361,39 @@ section {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid black;
-  background-color: skyblue;
+  background-color: #99BFF2;
   height: 8rem;
 }
-@media (min-width: 800px) {
-  .header {
+@media (min-width: 500px) {
+  .header .nav {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 100%;
   }
 }
-.header .Logo {
+@media (min-width: 800px) {
+  .header .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.header .logo {
   font-size: 3rem;
   text-align: center;
-  background-color: snow;
   width: 40%;
   margin: 0 1.5rem;
   padding: 0.75rem 0;
 }
 @media (min-width: 800px) {
-  .header .Logo {
+  .header .logo {
     width: 25%;
   }
+}
+.header .logo .nav-logo {
+  color: #242B40;
 }
 .header p {
   font-size: 1.6rem;
@@ -400,8 +412,11 @@ section {
 }
 .footer {
   text-align: center;
-  background-color: skyblue;
-  border: 1px solid purple;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(153, 191, 242, 0.5);
+  /*this closes the footerLinks*/
+  /*this closes the copyRight*/
 }
 @media (min-width: 1000px) {
   .footer {
@@ -412,7 +427,12 @@ section {
 }
 .footer .footerLinks {
   margin: 0 auto;
-  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*this closes a */
+  /*this closes the links*/
+  /*this closes the tooltip*/
 }
 @media (min-width: 1000px) {
   .footer .footerLinks {
@@ -420,11 +440,18 @@ section {
     width: 70%;
   }
 }
+.footer .footerLinks a {
+  font-size: 2rem;
+  color: #242B40;
+  margin: 0.5rem 5rem;
+  text-decoration: none;
+}
 .footer .footerLinks .links {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  border: 1px solid green;
+  font-size: 2rem;
+  color: #242B40;
 }
 @media (min-width: 1000px) {
   .footer .footerLinks .links {
@@ -432,22 +459,18 @@ section {
     width: 70%;
   }
 }
-.footer .footerLinks .links a {
-  font-size: 2rem;
-  margin: 2rem 5rem;
-  text-decoration: none;
-  border: 1px solid red;
-}
-.footer .footerLinks .links .tooltip {
+.footer .footerLinks .tooltip {
   position: relative;
+  /*this closes the tooltiptext*/
+  /*this closes the hover*/
 }
-.footer .footerLinks .links .tooltip .tooltiptext {
+.footer .footerLinks .tooltip .tooltiptext {
   display: none;
   width: 500%;
   color: red;
   background-color: snow;
   border: 1px solid grey;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   position: absolute;
   z-index: 1;
@@ -456,33 +479,76 @@ section {
   margin-left: -394px;
 }
 @media (min-width: 500px) {
-  .footer .footerLinks .links .tooltip .tooltiptext {
+  .footer .footerLinks .tooltip .tooltiptext {
     margin-left: -370px;
   }
 }
 @media (min-width: 1000px) {
-  .footer .footerLinks .links .tooltip .tooltiptext {
+  .footer .footerLinks .tooltip .tooltiptext {
     margin-left: -240px;
   }
 }
-.footer .footerLinks .links:hover .tooltiptext {
+.footer .footerLinks .tooltip:hover .tooltiptext {
   display: block;
 }
-.footer .copyRight {
+.footer .copyright {
   font-size: 2rem;
+  font-weight: bold;
   text-align: center;
   padding: 2rem;
+  color: #242B40;
+  border: 1px solid red;
 }
 @media (min-width: 1000px) {
-  .footer .copyRight {
+  .footer .copyright {
     width: 15%;
   }
 }
+
+@media (min-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
 .links {
   text-decoration: none;
 }
+@media (min-width: 500px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media (min-width: 500px) {
+  .baby {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .welcome {
-  color: brown;
+  color: #242B40;
 }
 .aboutContainer {
   width: 100%;
