@@ -497,7 +497,6 @@ section {
   text-align: center;
   padding: 2rem;
   color: #242B40;
-  border: 1px solid red;
 }
 @media (min-width: 1000px) {
   .footer .copyright {
