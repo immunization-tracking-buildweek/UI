@@ -3,12 +3,16 @@
 	width:100%;
 	
 	section{
+		max-width:100%;
 		margin:auto;
 
 		.aboutImg{
 		width: 100%;
 		max-height: 40vh;
 		margin:auto;
+		@media @aboutTablet{
+			margin:auto;
+		}
 		@media @aboutDesktop{
 			max-height: 60vh;
 		}
@@ -98,4 +102,5 @@ a{
 i {
 	margin: 1rem 1rem auto;
 	font-size:4rem;
+	color:black;
 }

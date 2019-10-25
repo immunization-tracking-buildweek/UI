@@ -2,39 +2,45 @@
 	text-align: center;
 	width:100%;
 	margin:auto;
-	background-color:rgba(153, 191,242,.5);
+	background-color:rgba(153, 191,242,.25);
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+
 	
 		@media @aboutDesktop{
 		display:flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
 		align-items: center;
 	}
 	.footerLinks{
+		width:40%;
 		margin: 0 auto;
 		
-		display:flex;
-		flex-direction: column;
-		flex-wrap: wrap;
+		
 		@media @aboutDesktop{
 			display:inline-block;
-		    width:70%;
+			width:50%;
+			margin: 1rem 1rem;
 		}
 		a {
-			font-size:2rem;
-			color:#242B40;
-			margin: .5rem 5rem;
+			// border:1px solid red;
+			margin: .5rem 1rem auto;
 			text-decoration: none;
 		} /*this closes a */
 		.links{
-			display:flex;
-			flex-direction:row;
-			justify-content: space-evenly;
-			// border: 1px solid green;
+			// border:1px solid red;
+			// display:flex;
+			// flex-direction:row;
+			// justify-content: space-evenly;
+			// margin: .5rem, 2rem auto;
 			font-size:2rem;
 			color:#242B40;
+			padding:.5rem;
 			@media @aboutDesktop{
 			    display:inline-block;
-			    width:70%;
+			    width:20%;
 			}
 		} /*this closes the links*/
 		.tooltip{
@@ -57,6 +63,7 @@
 				}
 				@media @aboutDesktop{
 					margin-left: -240px;
+					height:6rem;
 				}
 			} /*this closes the tooltiptext*/
 			&:hover .tooltiptext {
@@ -68,7 +75,7 @@
 		font-size:2rem;
 		font-weight: bold;
 		text-align: center;
-		padding:2rem;
+		padding:.5rem;
 		color:#242B40;
 		//border:1px solid red;
 		@media @aboutDesktop{

@@ -414,22 +414,24 @@ section {
   text-align: center;
   width: 100%;
   margin: auto;
-  background-color: rgba(153, 191, 242, 0.5);
+  background-color: rgba(153, 191, 242, 0.25);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   /*this closes the footerLinks*/
   /*this closes the copyRight*/
 }
 @media (min-width: 1000px) {
   .footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
 }
 .footer .footerLinks {
+  width: 40%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   /*this closes a */
   /*this closes the links*/
   /*this closes the tooltip*/
@@ -437,26 +439,23 @@ section {
 @media (min-width: 1000px) {
   .footer .footerLinks {
     display: inline-block;
-    width: 70%;
+    width: 50%;
+    margin: 1rem 1rem;
   }
 }
 .footer .footerLinks a {
-  font-size: 2rem;
-  color: #242B40;
-  margin: 0.5rem 5rem;
+  margin: 0.5rem 1rem auto;
   text-decoration: none;
 }
 .footer .footerLinks .links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   font-size: 2rem;
   color: #242B40;
+  padding: 0.5rem;
 }
 @media (min-width: 1000px) {
   .footer .footerLinks .links {
     display: inline-block;
-    width: 70%;
+    width: 20%;
   }
 }
 .footer .footerLinks .tooltip {
@@ -486,6 +485,7 @@ section {
 @media (min-width: 1000px) {
   .footer .footerLinks .tooltip .tooltiptext {
     margin-left: -240px;
+    height: 6rem;
   }
 }
 .footer .footerLinks .tooltip:hover .tooltiptext {
@@ -495,7 +495,7 @@ section {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  padding: 2rem;
+  padding: 0.5rem;
   color: #242B40;
 }
 @media (min-width: 1000px) {
@@ -505,6 +505,20 @@ section {
 }
 /*this closes .footer*/
 @media (min-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media desktop {
   .header {
     display: flex;
     flex-direction: column;
@@ -548,16 +562,46 @@ section {
 .welcome {
   color: #242B40;
 }
+@media (min-width: 500px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+@media (min-width: 800px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+}
 .aboutContainer {
   width: 100%;
 }
 .aboutContainer section {
+  max-width: 100%;
   margin: auto;
 }
 .aboutContainer section .aboutImg {
   width: 100%;
   max-height: 40vh;
   margin: auto;
+}
+@media (min-width: 800px) {
+  .aboutContainer section .aboutImg {
+    margin: auto;
+  }
 }
 @media (min-width: 1000px) {
   .aboutContainer section .aboutImg {
@@ -644,4 +688,5 @@ a:hover {
 i {
   margin: 1rem 1rem auto;
   font-size: 4rem;
+  color: black;
 }
