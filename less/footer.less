@@ -3,14 +3,13 @@
 	width:100%;
 	margin:auto;
 	background-color:rgba(153, 191,242,.25);
-	.flexrow();
-	justify-content: space-evenly;
-
+	display:flex;
 	
 		@media @aboutDesktop{
 		justify-content: space-around;
 		align-items: center;
-	}
+		}
+	
 	.footerLinks{
 		width:40%;
 		margin: 0 auto;
@@ -31,8 +30,8 @@
 			color:#242B40;
 			padding:.5rem;
 			@media @aboutDesktop{
-			    display:inline-block;
-				width:30%;
+				.flexcolumn();
+				width:100%;
 				margin:0 auto;
 			}
 		} /*this closes the links*/
@@ -57,8 +56,9 @@
 					max-width:250%;
 				}
 				@media @aboutDesktop{
+					text-align: center;
 					font-size:2.5rem;
-					margin-left: -440px;
+					margin-left: 5px;
 					height:6rem;
 				}
 			} /*this closes the tooltiptext*/
@@ -66,7 +66,8 @@
 				display:block;
 			} 	/*this closes the hover*/
 		} /*this closes the tooltip*/  	
-	} /*this closes the footerLinks*/
+	
+
 	.copyright{
 		font-size:2rem;
 		font-weight: bold;
@@ -77,11 +78,10 @@
 		// border:1px solid red;
 		width:50%;
 		@media @aboutDesktop{
-			width:15%;
-
+			width:60%;
 		}
 	} /*this closes the copyRight*/
-} /*this closes .footer*/
+} /*this closes .footer*/	
 
 
 

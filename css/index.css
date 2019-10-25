@@ -422,10 +422,7 @@ section {
   margin: auto;
   background-color: rgba(153, 191, 242, 0.25);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  /*this closes the footerLinks*/
+  /*this closes the tooltip*/
   /*this closes the copyRight*/
 }
 @media (min-width: 1000px) {
@@ -439,7 +436,8 @@ section {
   margin: 0 auto;
   /*this closes a */
   /*this closes the links*/
-  /*this closes the tooltip*/
+  /*this closes the tooltiptext*/
+  /*this closes the hover*/
 }
 @media (min-width: 1000px) {
   .footer .footerLinks {
@@ -459,15 +457,19 @@ section {
 }
 @media (min-width: 1000px) {
   .footer .footerLinks .links {
-    display: inline-block;
-    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
   }
 }
 .footer .footerLinks .tooltip {
   position: relative;
-  /*this closes the tooltiptext*/
-  /*this closes the hover*/
 }
 .footer .footerLinks .tooltip .tooltiptext {
   display: none;
@@ -481,27 +483,23 @@ section {
   z-index: 1;
   bottom: 100%;
   left: 50%;
-  margin-left: -394px;
-}
-@media (min-width: 500px) {
-  .footer .footerLinks .tooltip .tooltiptext {
-    margin-left: -120px;
-  }
+  margin-left: -154px;
 }
 @media (min-width: 800px) {
-  .footer .footerLinks .tooltip .tooltiptext {
+  .footer .footerLinks .tooltip {
     font-size: 2rem;
     max-width: 250%;
   }
 }
 @media (min-width: 1000px) {
-  .footer .footerLinks .tooltip .tooltiptext {
+  .footer .footerLinks .tooltip {
+    text-align: center;
     font-size: 2.5rem;
-    margin-left: -440px;
+    margin-left: 5px;
     height: 6rem;
   }
 }
-.footer .footerLinks .tooltip:hover .tooltiptext {
+.footer .footerLinks:hover .tooltiptext {
   display: block;
 }
 .footer .copyright {
@@ -515,7 +513,7 @@ section {
 }
 @media (min-width: 1000px) {
   .footer .copyright {
-    width: 15%;
+    width: 60%;
   }
 }
 /*this closes .footer*/
@@ -565,6 +563,7 @@ section {
 }
 .aboutContainer {
   width: 100%;
+  /*closes section*/
 }
 .aboutContainer section {
   max-width: 100%;
@@ -612,6 +611,7 @@ section {
     font-size: 3rem;
   }
 }
+/* closes aboutContainer*/
 #aboutTeam {
   display: flex;
   flex-direction: column;
