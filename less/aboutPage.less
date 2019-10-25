@@ -39,20 +39,15 @@
 				font-size:3rem;
 			}
 		}	
-	}
+	} /*closes section*/
 	
-}
+} /* closes aboutContainer*/
 
 
 
 
 
-a{
-	text-decoration: none;
-	&:hover{
-		background-color:slateblue;
-	}
-}
+
 
 
 #aboutTeam{
@@ -66,41 +61,59 @@ a{
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 	}
+	.aboutPerson{
+		text-align: center;
+		width: 60%;
+		height: 25rem;
+		border:1px solid black;
+		border-radius:15px;
+		background-color:silver;
+		margin: 2rem 0;
 	
-}
-.aboutPerson{
-	text-align: center;
-	width: 60%;
-	height: 25rem;
-	border:1px solid black;
-	border-radius:15px;
-	background-color:silver;
-	margin: 2rem 0;
-
-	@media @aboutTablet{
-		width:40%;
-
-	}
-	@media @aboutDesktop{
-		width:27%;
-	}
-}
-.aboutPic  {
+		@media @aboutTablet{
+			width:40%;
 	
-	margin: 1rem 0 auto;
-	border-radius:10px;
-	width: auto;
-	height: 100px;	
-}
-.aboutName{
-	margin: 1rem 0 auto;
+		}
+		@media @aboutDesktop{
+			width:27%;
+		}
+		.aboutPic  {
+		
+			margin: 1rem 0 auto;
+			border-radius:10px;
+			width: auto;
+			height: 100px;	
+		}
+		.aboutName{
+			margin: 1rem 0 auto;
+		
+		}
+		.aboutRole{
+			margin: .5rem 0 auto;
+		}
+		
+	}/*this closes aboutPerson*/
+	
+} /*this closes aboutTeam*/
 
-}
-.aboutRole{
-	margin: .5rem 0 auto;
-}
+
 i {
 	margin: 1rem 1rem auto;
 	font-size:4rem;
 	color:black;
 }
+
+a .fab{
+	&:hover{
+		cursor: pointer;
+		animation: rotate-vertical 1.1s ease-out;
+	} /*this closes the hover*/
+	@keyframes rotate-vertical {
+		0% {
+			transform: rotateY(0deg);
+		}
+		100% {
+			transform: rotateY(360deg);
+		}
+	} /*this closes keyframes*/
+} /*this closes .fab*/
