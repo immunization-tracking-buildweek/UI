@@ -3,14 +3,11 @@
 	width:100%;
 	margin:auto;
 	background-color:rgba(153, 191,242,.25);
-	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	.flexrow();
 	justify-content: space-evenly;
 
 	
 		@media @aboutDesktop{
-		display:flex;
 		justify-content: space-around;
 		align-items: center;
 	}
@@ -21,7 +18,7 @@
 		
 		@media @aboutDesktop{
 			display:inline-block;
-			width:50%;
+			width:100%;
 			margin: 1rem 1rem;
 		}
 		a {
@@ -30,39 +27,38 @@
 			text-decoration: none;
 		} /*this closes a */
 		.links{
-			// border:1px solid red;
-			// display:flex;
-			// flex-direction:row;
-			// justify-content: space-evenly;
-			// margin: .5rem, 2rem auto;
 			font-size:2rem;
 			color:#242B40;
 			padding:.5rem;
 			@media @aboutDesktop{
 			    display:inline-block;
-			    width:20%;
+				width:30%;
+				margin:0 auto;
 			}
 		} /*this closes the links*/
 		.tooltip{
 			position:relative;
 			.tooltiptext{
 				display:none;
-				width:500%;
+				max-width:200%;
 				color:red;
 				background-color: snow;
 				border:1px solid grey;
-				font-size:2.5rem;
+				font-size:1.6rem;
 				font-weight: bold;
 				position:absolute;
 				z-index: 1;
 				bottom: 100%;
 				left: 50%;
-				margin-left: -394px;
-				@media @aboutMobile{
-					margin-left: -370px;
+				margin-left: -154px;
+				}
+				@media @aboutTablet{
+					font-size:2rem;
+					max-width:250%;
 				}
 				@media @aboutDesktop{
-					margin-left: -240px;
+					font-size:2.5rem;
+					margin-left: -440px;
 					height:6rem;
 				}
 			} /*this closes the tooltiptext*/
@@ -82,6 +78,7 @@
 		width:50%;
 		@media @aboutDesktop{
 			width:15%;
+
 		}
 	} /*this closes the copyRight*/
 } /*this closes .footer*/
